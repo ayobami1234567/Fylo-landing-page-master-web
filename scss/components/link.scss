@@ -1,0 +1,23 @@
+.section-2__link {
+    a {
+        display: inline-flex;
+        align-items: center;
+        color: $moderate-cyan;
+        border-bottom: 1px solid;
+        padding-bottom: 6px;
+        font-size: 13px;
+
+        @include desktop {
+            &:hover {
+                color: lighten($moderate-cyan, 30%);
+            }
+            &:hover svg path:nth-of-type(1){
+                fill: lighten($moderate-cyan, 30%);
+            }
+        }
+
+        svg {
+            margin-left: 8px;
+        }
+    }
+}

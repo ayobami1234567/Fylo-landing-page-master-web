@@ -1,0 +1,67 @@
+.footer-container {
+    @include box-size (81%, auto);
+    @extend %margin-lr;
+
+    @include big-tablet {
+        @include box-size (90%, auto);
+    }
+    
+    .logo {
+        margin-bottom: 2.5rem;
+
+        @include desktop {
+            margin-bottom: 1.4rem;
+        }
+    }
+}
+
+.info {
+    display: grid;
+
+    @include big-tablet {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    &__contact {
+        margin-bottom: 4rem;
+
+        p {
+            @include flex (row, nowrap, flex-start, center);
+            svg {
+                margin-right: 1rem;
+            }
+
+            @include big-tablet {
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
+        }
+
+    }
+
+    &__site {
+        display: inline-grid;
+        margin-bottom: 2rem;
+        row-gap: 2.1rem;
+
+        @include big-tablet {
+            grid-template-columns: 1fr 1fr;
+            justify-items: center;
+        }
+
+        a {
+            color: inherit;
+            display: block;
+            margin-bottom: 1.3rem;
+
+            @include desktop {
+                &:hover {
+                    color: $hover;
+                }
+            }
+        }
+    }
+
+    // &__social {}
+}

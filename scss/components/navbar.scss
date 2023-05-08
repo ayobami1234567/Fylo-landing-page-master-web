@@ -1,0 +1,42 @@
+.navbar {
+    padding-top: 12px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+        width: 83px;
+
+        @include tablet {
+            width: 125px;
+        }
+        @include desktop {
+            width: 166px;
+        }
+    }
+
+    .menu {
+        list-style-type: none;
+        padding-left: 0;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+
+        @include tablet {
+            grid-template-columns: repeat(3, auto);
+            justify-content: space-between;
+            width: 17rem;
+        }
+
+        &__link {
+            font-size: 13px;
+            color: inherit;
+
+            @include big-tablet {
+                font-size: 1rem;
+            }
+        }
+    }
+}

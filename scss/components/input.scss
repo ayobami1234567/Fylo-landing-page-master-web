@@ -1,0 +1,15 @@
+.intro__form-input {
+    // font-size, margin-bottom, border-radius
+    @include input (13px, 1rem, 4px);
+    border: 1px solid black;
+}
+
+.cta__input {
+    // font-size, margin-bottom, border-radius
+    @include input (11px, 8px, 2px);
+
+    @include desktop {
+        @include input (13px, 1rem, 4px);
+        padding: 1rem 1.53em;
+    }
+}

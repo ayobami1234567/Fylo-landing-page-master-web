@@ -1,0 +1,15 @@
+.intro__form-button {
+     // font-size, padding, border-radius
+     @include button (14px, 13px, 4px);
+     box-shadow: 2px 2px 4px lightgray;
+}
+
+.cta__button {
+     // font-size, padding, border-radius
+     @include button (10px, 11px, 2px);
+
+     @include desktop {
+          @include button (14px, 14px, 2px);
+          padding: 14px 30px;
+     }
+}

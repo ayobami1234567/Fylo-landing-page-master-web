@@ -1,0 +1,153 @@
+.section-2 {
+    @include box-size (85%, auto);
+    max-width: 1280px;
+    @extend %margin-lr;
+    text-align: center;
+
+    @include big-tablet {
+        @include box-size (90%, auto);
+        text-align: left;
+        
+        display: grid;
+        grid-template-columns: 52% 48%;
+        justify-items: end;
+        align-items: center;
+    }
+
+    &__illustration {
+        margin-bottom: 5.2rem;
+        
+        @include tablet {
+            @include box-size (80%, auto);
+        }
+
+        @include big-tablet {
+            order: 2;
+        }
+
+        @include desktop {
+            width: 542px;
+            margin-bottom: 0;
+        }
+    }
+
+    &__subtitle {
+        font-size: 1rem;
+        margin-bottom: 1.7rem;
+
+        @include desktop {
+            font-size: 2.5rem;
+            margin-bottom: 2.3rem
+        }
+    }
+
+    &__paragraph {
+        @include paragraph(1.1rem);
+        color: $desaturated-blue;
+        text-align: left;
+
+        @include desktop {
+            font-size: 1rem;
+            width: 540px;
+        }
+
+        &:nth-of-type(2) {
+            margin-bottom: 2.3rem;
+
+            @include desktop {
+                margin-bottom: 1.15rem;
+            }
+        }
+    }
+
+    &__link {
+        margin-bottom: 2.6rem;
+
+        @include desktop {
+            margin-bottom: 2.8rem;
+        }
+
+        a {
+            @include desktop {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    &__card {
+        @include box-size (92%, auto);
+        @extend %margin-lr;
+        text-align: left;
+
+        @include big-tablet {
+            @include box-size (65%, auto);
+            margin: 0;
+        }
+
+        @include desktop {
+            width: 350px;
+        }
+    }
+}
+
+.cta {
+    @include box-size (75%, auto);
+    max-width: 1280px;
+    @extend %margin-lr;
+    color: $light-grayish-blue;
+    text-align: center;
+
+    @include big-tablet {
+        @include box-size (90%, auto);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        align-items: center;
+        text-align: left;
+    }
+
+    @include desktop {
+        grid-template-columns: 60% 40%;
+        justify-items: flex-start;
+    }
+
+    &__subtitle {
+        @include desktop {
+            font-size: 2rem;
+            margin-bottom: 21px
+        }
+    }
+
+    &__paragraph {
+        @include paragraph(1.5rem);
+
+        @include desktop {
+            font-size: 1rem;
+            width: 500px;
+            @include paragraph(14px);
+        }
+    }
+
+    &__form {
+        @include tablet {
+            input {
+                @include box-size (70%, auto);
+            }
+        }
+        
+        @include big-tablet {
+            @include box-size (70%, auto);
+            input {
+                width: auto;
+
+                &:first-child {
+                    @include box-size ();
+                }
+            }
+        }
+
+         @include desktop {
+             @include box-size (95%, auto);
+         }
+    }
+}
